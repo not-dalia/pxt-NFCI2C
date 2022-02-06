@@ -318,9 +318,10 @@ namespace NFC {
                 return false;
             }
         }
-        if ((recvBuf[6] != 0xD5) || (!checkDcs(24 - 4))) {
-            return false;
-        }
+
+        // if ((recvBuf[6] != 0xD5) || (!checkDcs(24 - 4))) {
+        //     return false;
+        // }
         for (let i = 0; i < uId.length; i++) {
             uId[i] = recvBuf[14 + i];
         }
